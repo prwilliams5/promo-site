@@ -1,1 +1,1 @@
-# Parker's website built with Next.js and Chakra UI.
+# Parker's website built with Next.js and Chakra UI
