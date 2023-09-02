@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import Logo from './Logo'
 import NextLink from 'next/link'
 import {
@@ -35,16 +36,21 @@ const LinkItem = ({ href, path, children }) => {
   )
 }
 
+const MenuLink = forwardRef((props, ref) => (
+  <Link ref={ref} as={NextLink} {...props} />
+))
+MenuLink.displayName = 'MenuLink'
+
 const Navbar = props => {
   const { path } = props
   return (
     <Box
       position="fixed"
       as="nav"
-      w="105%"
+      w="100%"
       bg={useColorModeValue('#ffffff40', '#20202380')}
       style={{ backdropFilter: 'blur(10px)' }}
-      zIndex={1}
+      zIndex={2}
       {...props}
     >
       <Container
@@ -75,19 +81,37 @@ const Navbar = props => {
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/prwilliams5/promo-site"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Github
-          </LinkItem>
         </Stack>
+
+        <Box flex={1} align="right">
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu isLazy id="navbar-menu">
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+              />
+              <MenuList>
+                <MenuItem as={MenuLink} href="/">
+                  About
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/works">
+                  Projects
+                </MenuItem>
+                <MenuItem as={MenuLink} href="/posts">
+                  Posts
+                </MenuItem>
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/prwilliams5/promo-site"
+                >
+                  Website Repo
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box>
       </Container>
     </Box>
   )
