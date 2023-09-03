@@ -1,9 +1,17 @@
 import { Container, Box, Heading, Image } from '@chakra-ui/react'
+import { useColorModeValue } from '@chakra-ui/react'
 
 const Page = () => {
   return (
     <Container>
-      <Box borderRadius="lg" bg="#70707F" p={3} align="center">
+      <Box
+        borderRadius="lg"
+        my={6}
+        p={3}
+        textAlign="center"
+        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        css={{ backdropFilter: 'blur(10px)' }}
+      >
         Hi, I&apos;m a full-stack software developer & this is my website!
       </Box>
 
@@ -12,7 +20,7 @@ const Page = () => {
           <Heading as="h2" variant="page-title">
             Parker Williams
           </Heading>
-          <p>Digital Alchemist - develop | design | tinker</p>
+          <p>Digital Alchemist - design | develop | tinker</p>
         </Box>
         <Box
           flexShrink={0}
