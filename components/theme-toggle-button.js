@@ -1,24 +1,29 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+import { BsLamp } from 'react-icons/bs'
 
 const ThemeToggleButton = () => {
   const { toggleColorMode } = useColorMode()
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait">
       <motion.div
         style={{ display: 'inline-block' }}
         key={useColorModeValue('light', 'dark')}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 20, opacity: 0 }}
-        transition={{ duration: 0.2 }}
+        initial={{ y: 0 }}
+        animate={{
+          y: [5, 0, 2, 0, 1, 0], // Start slightly up (5), bounce a few times
+          transition: {
+            type: 'spring',
+            damping: 5, // Adjust for less damping (more bounciness)
+            stiffness: 100 // Adjust stiffness as per desired effect
+          }
+        }}
       >
         <IconButton
           aria-label="Toggle theme"
           colorScheme={useColorModeValue('purple', 'orange')}
-          icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+          icon={useColorModeValue(<BsLamp />, <BsLamp />)}
           onClick={toggleColorMode}
         ></IconButton>
       </motion.div>
