@@ -16,6 +16,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { BsGithub } from 'react-icons/bs'
 import ThemeToggleButton from './theme-toggle-button'
 
 const LinkItem = ({ href, path, children }) => {
@@ -61,7 +62,7 @@ const Navbar = props => {
         align="center"
         justify="space-between"
       >
-        <Flex align="centger" mr={5}>
+        <Flex align="center" mr={2}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
             <Logo />
           </Heading>
@@ -74,43 +75,62 @@ const Navbar = props => {
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
+          p={2}
         >
-          <LinkItem href="/projects" path={path}>
+          <Link as={NextLink} href="/projects" path={path}>
             Projects
-          </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem>
+          </Link>
+          <Link as={NextLink} href="/hobbies" path={path}>
+            Hobbies
+          </Link>
+          <Link as={NextLink} href="/work" path={path}>
+            Work
+          </Link>
+          <Link
+            as={NextLink}
+            href="https://github.com/prwilliams5/promo-site"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            ml="auto"
+            pl={225}
+          >
+            <BsGithub />
+            Repo
+          </Link>
         </Stack>
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu isLazy id="navbar-menu">
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
-                aria-label="Options"
-              />
-              <MenuList>
-                <MenuItem as={MenuLink} href="/">
-                  About
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
-                  Projects
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/posts">
-                  Posts
-                </MenuItem>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/prwilliams5/promo-site"
-                >
-                  Website Repo
-                </MenuItem>
-              </MenuList>
-            </Menu>
+            <Box display={{ base: 'inline-block', md: 'none' }}>
+              <Menu isLazy id="navbar-menu">
+                <MenuButton
+                  as={IconButton}
+                  icon={<HamburgerIcon />}
+                  variant="outline"
+                  aria-label="Options"
+                />
+                <MenuList>
+                  <MenuItem as={MenuLink} href="/">
+                    About
+                  </MenuItem>
+                  <MenuItem as={MenuLink} href="/works">
+                    Projects
+                  </MenuItem>
+                  <MenuItem as={MenuLink} href="/posts">
+                    Posts
+                  </MenuItem>
+                  <MenuItem
+                    as={Link}
+                    href="https://github.com/prwilliams5/promo-site"
+                  >
+                    Website Repo
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+            </Box>
           </Box>
         </Box>
       </Container>

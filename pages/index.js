@@ -12,7 +12,7 @@ const Page = () => {
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hi, I&apos;m a full-stack software developer & this is my website!
+        Hi, I&apos;m a software developer & this is my website!
       </Box>
 
       <Box display={{ md: 'flex' }}>
