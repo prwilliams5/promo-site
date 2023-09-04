@@ -77,15 +77,15 @@ const Navbar = props => {
           mt={{ base: 4, md: 0 }}
           p={2}
         >
-          <Link as={NextLink} href="/career" path={path}>
+          <NextLink href="/career" path={path}>
             Career
-          </Link>
-          <Link as={NextLink} href="/projects" path={path}>
+          </NextLink>
+          <NextLink href="/projects" path={path}>
             Projects
-          </Link>
-          <Link as={NextLink} href="/blog" path={path}>
+          </NextLink>
+          <NextLink href="/blog" path={path}>
             Blog
-          </Link>
+          </NextLink>
           <Link
             as={NextLink}
             href="https://github.com/prwilliams5/promo-site"
