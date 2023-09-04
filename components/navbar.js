@@ -80,11 +80,11 @@ const Navbar = props => {
           <Link as={NextLink} href="/projects" path={path}>
             Projects
           </Link>
-          <Link as={NextLink} href="/hobbies" path={path}>
-            Hobbies
-          </Link>
           <Link as={NextLink} href="/work" path={path}>
             Work
+          </Link>
+          <Link as={NextLink} href="/blog" path={path}>
+            Blog
           </Link>
           <Link
             as={NextLink}
@@ -93,8 +93,7 @@ const Navbar = props => {
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
-            ml="auto"
-            pl={225}
+            ml={300}
           >
             <BsGithub />
             Repo

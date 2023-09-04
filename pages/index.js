@@ -20,7 +20,7 @@ const Page = () => {
           <Heading as="h2" variant="page-title">
             Parker Williams
           </Heading>
-          <p>Digital Alchemist - design | develop | tinker</p>
+          <p>Digital Builder - design | develop | tinker</p>
         </Box>
         <Box
           flexShrink={0}
