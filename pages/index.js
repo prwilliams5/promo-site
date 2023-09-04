@@ -6,7 +6,7 @@ const Page = () => {
     <Container>
       <Box
         borderRadius="lg"
-        my={6}
+        my={4}
         p={3}
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
