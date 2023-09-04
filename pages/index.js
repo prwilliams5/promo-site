@@ -1,5 +1,13 @@
-import { Container, Box, Heading, Image } from '@chakra-ui/react'
-import { useColorModeValue } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Heading,
+  Image,
+  useColorModeValue
+} from '@chakra-ui/react'
+
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
 
 const Page = () => {
   return (
@@ -40,6 +48,24 @@ const Page = () => {
           />
         </Box>
       </Box>
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Career
+        </Heading>
+        <Paragraph>
+          I am an IT professional with a knack for software development. For my
+          latest projects, in Fall of 2023, I have been working with TypeScript,
+          Next.js, SQL, TailwindCSS, and Chakra UI. I have also tinkered with
+          Python, Lua, and Bash quite a bit. Please check out my projects page
+          for both personal and professional work! My experience working in the
+          NOC of a data center has enabled me to flesh out the ops side of
+          development. I have worked with Linux, Docker, VMware, a bit of
+          Kubernetes, and many other technologies used in modern data centers. I
+          am currently looking for software development & devops opportunities
+          in the Dallas-Fort Worth area. If you think we might be a good fit
+          please reach out!
+        </Paragraph>
+      </Section>
     </Container>
   )
 }
