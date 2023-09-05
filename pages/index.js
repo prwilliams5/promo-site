@@ -10,6 +10,7 @@ import {
 
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
   return (
@@ -66,9 +67,16 @@ const Page = () => {
           a bit of Kubernetes, and many other technologies used in modern data
           centers. I&apos;m currently looking for software development & dev-ops
           opportunities in the Dallas-Fort Worth area. If you think we might be
-          a good fit please reach out! Resume available{' '}
-          <Link href="/career">here</Link>, contact info below.
+          a good fit I&apos;d love to talk, please reach out! Resume available
+          upon request.
         </Paragraph>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>1988</BioYear>
+          Born in Dallas, TX
+        </BioSection>
       </Section>
     </Container>
   )
