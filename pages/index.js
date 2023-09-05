@@ -10,7 +10,7 @@ import {
 
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
+import { ExpSection, ExpDate } from '../components/bio'
 
 const Page = () => {
   return (
@@ -23,8 +23,8 @@ const Page = () => {
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hi, I&apos;m a software developer & this is my website! Currently under
-        construction, please excuse any broken links or missing content!
+        Hi, I&apos;m a software developer & this is my website! It is currently
+        under construction, please excuse any broken links or missing content!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -53,7 +53,7 @@ const Page = () => {
         </Box>
       </Box>
       <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
+        <Heading size="xl" variant="section-title">
           Career
         </Heading>
         <Paragraph>
@@ -67,16 +67,37 @@ const Page = () => {
           a bit of Kubernetes, and many other technologies used in modern data
           centers. I&apos;m currently looking for software development & dev-ops
           opportunities in the Dallas-Fort Worth area. If you think we might be
-          a good fit I&apos;d love to talk, please reach out! Resume available
-          upon request.
+          a good fit I&apos;d love to talk, please{' '}
+          <Link href="/email">send me an email</Link>!
         </Paragraph>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>1988</BioYear>
-          Born in Dallas, TX
-        </BioSection>
+        <Section delay={0.2}>
+          <Heading size="lg" fontSize="25px" variant="section-title">
+            Experience
+          </Heading>
+          <ExpSection>
+            <ExpDate as={ExpDate} color="color">
+              2021 - Present | CloudKey / Global IP Networks
+            </ExpDate>
+          </ExpSection>
+          <Paragraph>
+            Develop web applications, embedded systems, and automation software
+            for physical and virtual data centers. Document procedures and
+            training materials for engineering, troubleshooting, and
+            administration of systems. Diagnose and repair operating systems
+            including Linux, ESXi, and Windows Server machines. Monitor network
+            and security tools, system logs, and dashboards for any issues and
+            take appropriate action.
+          </Paragraph>
+          <ExpSection mt={6}>
+            <ExpDate>2014 - 2021 | Darden Restaurant Group</ExpDate>
+          </ExpSection>
+          <Paragraph>
+            Designed marketing and event plans for private events and business
+            to business sales. Performed management functions including
+            facilitating new team member training. Awarded Employee of the
+            Quarter.
+          </Paragraph>
+        </Section>
       </Section>
     </Container>
   )
