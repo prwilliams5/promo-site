@@ -55,10 +55,10 @@ const Page = () => {
           Career
         </Heading>
         <Paragraph>
-          I am an IT professional with a knack for software development. For my
-          latest projects, in Fall of 2023, I have been working with TypeScript,
-          Next.js, SQL, TailwindCSS, and Chakra UI. I have also tinkered with
-          Python, Lua, and Bash quite a bit. Please check out my{' '}
+          I&apos;m an IT professional with a knack for software development. For
+          my latest projects, in Fall of 2023, I have been working with
+          TypeScript, Next.js, SQL, TailwindCSS, and Chakra UI. I have also
+          tinkered with Python, Lua, and Bash quite a bit. Please check out my{' '}
           <Link href="/projects">projects</Link> page for both personal and
           professional work! My experience working in the NOC of a data center
           has enabled me to flesh out the ops side of development as well. I
