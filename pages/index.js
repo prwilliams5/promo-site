@@ -22,7 +22,8 @@ const Page = () => {
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hi, I&apos;m a software developer & this is my website!
+        Hi, I&apos;m a software developer & this is my website! Currently under
+        construction, please excuse any broken links or missing content!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -55,18 +56,18 @@ const Page = () => {
           Career
         </Heading>
         <Paragraph>
-          I&apos;m an IT professional with a knack for software development. For
-          my latest projects, in Fall of 2023, I have been working with
-          TypeScript, Next.js, SQL, TailwindCSS, and Chakra UI. I have also
-          tinkered with Python, Lua, and Bash quite a bit. Please check out my{' '}
-          <Link href="/projects">projects</Link> page for both personal and
-          professional work! My experience working in the NOC of a data center
-          has enabled me to flesh out the ops side of development as well. I
-          have worked with Linux, Docker, VMware, a bit of Kubernetes, and many
-          other technologies used in modern data centers. I am currently looking
-          for software development & dev-ops opportunities in the Dallas-Fort
-          Worth area. If you think we might be a good fit please reach out!
-          Resume available <Link href="/career">here</Link>.
+          I&apos;m an IT professional with a knack for software development! In
+          my latest projects for Fall of 2023, I have been using TypeScript,
+          Next.js, SQL, and TailwindCSS, I have also tinkered with Python, Lua,
+          and Bash. Please check out my <Link href="/projects">projects</Link>{' '}
+          page for both personal and professional work! My experience working in
+          the NOC of a data center has enabled me to flesh out the operations
+          side of development as well. I have worked with Linux, Docker, VMware,
+          a bit of Kubernetes, and many other technologies used in modern data
+          centers. I&apos;m currently looking for software development & dev-ops
+          opportunities in the Dallas-Fort Worth area. If you think we might be
+          a good fit please reach out! Resume available{' '}
+          <Link href="/career">here</Link>, contact info below.
         </Paragraph>
       </Section>
     </Container>
