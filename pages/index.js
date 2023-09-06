@@ -76,7 +76,7 @@ const Page = () => {
           </Heading>
           <ExpSection>
             <ExpDate as={ExpDate} color="color">
-              2021 - Present | CloudKey / Global IP Networks
+              2021 - Present | CloudKey / GIP Networks
             </ExpDate>
           </ExpSection>
           <Paragraph>
