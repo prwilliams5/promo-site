@@ -62,13 +62,12 @@ const Page = () => {
           Next.js, SQL, and TailwindCSS, I have also tinkered with Python, Lua,
           and Bash. Please check out my <Link href="/projects">projects</Link>{' '}
           page for both personal and professional work! My experience working in
-          the NOC of a data center has enabled me to flesh out the operations
-          side of development as well. I have worked with Linux, Docker, VMware,
-          a bit of Kubernetes, and many other technologies used in modern data
-          centers. I&apos;m currently looking for software development & dev-ops
-          opportunities in the Dallas-Fort Worth area. If you think we might be
-          a good fit I&apos;d love to talk, please{' '}
-          <Link href="/email">send me an email</Link>!
+          the NOC of a data center has enabled me to explore the operations side
+          of development as well. I have worked with Linux, Docker, Ansible,
+          VMware, and many other technologies. I&apos;m currently looking for
+          software development & dev-ops opportunities in the Dallas-Fort Worth
+          area. If you think we might be a good fit I&apos;d love to talk,
+          please <Link href="/contact">send me an email</Link>!
         </Paragraph>
         <Section delay={0.2}>
           <Heading size="lg" fontSize="25px" variant="section-title">
