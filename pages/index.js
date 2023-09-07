@@ -23,8 +23,9 @@ const Page = () => {
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hi, I&apos;m a software developer & this is my website! It is currently
-        under construction, please excuse any broken links or missing content!
+        Hi, I&apos;m a software developer and this is my website! It is
+        currently under construction, please excuse any broken links or missing
+        content!
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -65,9 +66,10 @@ const Page = () => {
           the NOC of a data center has enabled me to explore the operations side
           of development as well. I have worked with Linux, Docker, Ansible,
           VMware, and many other technologies. I&apos;m currently looking for
-          software development & dev-ops opportunities in the Dallas-Fort Worth
-          area. If you think we might be a good fit I&apos;d love to talk,
-          please <Link href="/contact">send me an email</Link>!
+          software development and dev-ops opportunities in the Dallas-Fort
+          Worth area. If you think we might be a good fit I&apos;d love to chat,
+          my contact info is below, please email me at
+          <Link href="/contact"> parker@parkerw.dev</Link>!
         </Paragraph>
         <Section delay={0.2}>
           <Heading size="lg" fontSize="25px" variant="section-title">
